@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import './assets/section4fonts.css';
+import '../assets/section4fonts.css';
 import { Provider } from 'react-redux';
-import store from './store';
-import data from './data.json';
+import store from '../store/store';
+import data from '../data.json';
 import Search from './Search';
 import Views from './Views';
 
@@ -42,9 +40,17 @@ class App extends Component {
           <Search searchParams={searchParams} updateSearchParams={this.updateSearchParams}/>
         </header>
         <h1 className='tk-benton-sans'>hi there</h1>
-        {/* <Provider value={this.state}>
-        </Provider> */}
-        <Views {...data} />
+        <Provider store={store}>
+          <div>
+            <h3>Toggle Display</h3>
+            <button>Slider</button>
+            <button>List</button>
+          </div>
+          <div>
+            <h1>Headline</h1>
+            <Views {...data} />
+          </div>
+        </Provider>
       </div>
     );
   }
