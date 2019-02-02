@@ -1,0 +1,53 @@
+{
+  "data":
+  [
+    {
+      "id": "XslY1vp8NPhX",
+      "name": "Lowe’s Abandons Smaller Store Format in Retreat From Manhattan",
+      "show": "The Righteous",
+      "backgroundImage": "imageOne.jpg",
+      "description": "The home-improvement retailer announced the closing of 51 under-performing stores on Monday, including two New York locations that the company hailed just three years ago as way to win over city dwellers.",
+      "timestamp": 1546876079
+    },
+    {
+      "id": "UJDBIRPN8LtQ",
+      "name": "Inside Walmart’s Secret ‘Kepler’ Store for Testing Tech",
+      "show": "The River",
+      "backgroundImage": "imageTwo.jpg",
+      "description": "At first glance, the small Walmart store in the New York suburb of Levittown seems unexceptional, but hovering above the aisles of water bottles, pet food and cookies are clues to an important technology experiment the giant retailer is conducting.",
+      "timestamp": 1544572800
+    },
+    {
+      "id": "u3d9Ct7JunNe",
+      "name": "Alibaba’s Sale Event Sets Record, but Economic Woes Linger",
+      "show": "The River",
+      "backgroundImage": "imageThree.jpg",
+      "description": "Alibaba said its annual Nov. 11 Singles Day sale, the world’s biggest online shopping event, generated $30.8 billion in transaction volume, surpassing last year’s record of $25.3 billion. ",
+      "timestamp": 1544140800
+    },
+    {
+      "id": "r9HO9UDVNFxd",
+      "name": "Competition to AmazonGo Is Coming From an Unlikely Source",
+      "show": "The Rant",
+      "backgroundImage": "imageFour.jpg",
+      "description": "Amazon.com Inc. set off a global race to automate grocery shopping. The latest entrant comes from a nation not known for state-of-the-art retail experiences: Israel. Shufersal Ltd., Israel’s largest supermarket chain, is partnering with local startup Trigo Vision Ltd. to eliminate the need for cashiers in its 272 stores, the companies said in a statement Tuesday.",
+      "timestamp": 1542412800
+    },
+    {
+      "id": "odM7rmChw94X",
+      "name": "Pinduoduo’s Rapid Growth Slows Sharply",
+      "show": "The Round Table",
+      "backgroundImage": "imageFive.jpg",
+      "description": "Chinese discount shopping app Pinduoduo has grown explosively to challenge the country’s biggest ecommerce giants, Alibaba and JD.com, paving the way for the company to go public in the U.S. in July.",
+      "timestamp": 1541203200
+    },
+    {
+      "id": "NzzAw03kseen",
+      "name": "Google CEO Defends China Push in Letter to Senators",
+      "show": "The River",
+      "backgroundImage": "imageSix.jpg",
+      "description": "Lawmakers have pressed Google for more information on the internet giant’s interest in returning to China. They aren’t likely to be satisfied by the response, if a a newly published letter from CEO Sundar Pichai to senators is any indication.",
+      "timestamp": 1541030400
+    }
+  ]
+}
