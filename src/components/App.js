@@ -5,6 +5,7 @@ import store from '../store/store';
 import data from '../data.json';
 import Search from './Search';
 import Views from './Views';
+import Carousel from './Carousal';
 
 
 class App extends Component {
@@ -18,6 +19,23 @@ class App extends Component {
       searchParams: ''
     }
     this.updateSearchParams = this.updateSearchParams.bind(this);
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle(button){
+    const {sliderView, listView} = this.state;
+    switch (button) {
+      case 'slider':
+        if(sliderView) break;
+        this.setState({sliderView: true, listView: false});
+        break;
+      case 'list':
+        if(listView) break;
+        this.setState({listView: true, sliderView: false});
+        break;
+      default:
+        break;
+    }
   }
 
   updateSearchParams(event){
@@ -30,10 +48,9 @@ class App extends Component {
     //   .then(data => this.setState({ data }));
     // console.log('data',data);
     this.setState({ data })
-
   }
   render() {
-    const {searchParams} = this.state;
+    const {searchParams, sliderView, listView} = this.state;
     return (
       <div>
         <header>
@@ -43,13 +60,13 @@ class App extends Component {
         <Provider store={store}>
           <div>
             <h3>Toggle Display</h3>
-            <button>Slider</button>
-            <button>List</button>
+            <button onClick={(e) => this.toggle('slider')}>Slider</button>
+            <button onClick={(e) => this.toggle('list')}>List</button>
           </div>
-          <div>
-            <h1>Headline</h1>
-            <Views {...data} />
-          </div>
+          {/* <div> */}
+            {/* <h1>Headline</h1> */}
+            <Views {...data} sliderView={sliderView} listView={listView} />
+          {/* </div> */}
         </Provider>
       </div>
     );
