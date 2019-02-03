@@ -6,6 +6,7 @@ import data from '../data.json';
 import Search from './Search';
 import Views from './Views';
 import Carousel from './Carousal';
+import Section4Logo from '../assets/section4Logo.svg';
 
 
 class App extends Component {
@@ -54,8 +55,11 @@ class App extends Component {
     return (
       <div>
         <header>
-          <Search searchParams={searchParams} updateSearchParams={this.updateSearchParams}/>
+          <img src={Section4Logo} alt='logo' />
         </header>
+        <div className='search'>
+          <Search searchParams={searchParams} updateSearchParams={this.updateSearchParams}/>
+        </div>
         <h1 className='tk-benton-sans'>hi there</h1>
         <Provider store={store}>
           <div>

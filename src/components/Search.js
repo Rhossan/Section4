@@ -7,8 +7,10 @@ export default class Search extends Component {
         return(
         <div className='search-field'>
             <input
+                className='tk-benton-sans-wide'
                 onChange={this.props.updateSearchParams}
                 value={searchParams}
+                placeholder='Search "Walmart"'
             ></input>
         </div>
         );
