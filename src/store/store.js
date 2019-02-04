@@ -3,7 +3,13 @@ import  thunk  from 'redux-thunk';
 import reducer from '../reducers';
 
 const store = createStore(
-  reducer,
+  reducer, {
+      apiData: null,
+      filteredData: null,
+      sliderView: true,
+      listView: false,
+      searchParams: ''
+  },
   compose(
     applyMiddleware(thunk),
     typeof window === "object" &&

@@ -50,6 +50,36 @@ code {
 }
 
 
+.toggles{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-right: 88px;
+  & h3 {
+    color: #020064;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  & button{
+    width: 110px;
+    height: 44px;
+    color: #020064;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 6px;
+    &.button-active{
+      background-color: #170065;
+      color: white;
+    }
+    &.button-disable{
+      // color: #565656;
+      // display: inline-block;
+      // border: none;
+    }
+  }
+}
+
+
 @media screen and ( min-width: 376px ) {
   header{
   height: 75px;

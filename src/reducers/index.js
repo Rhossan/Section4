@@ -1,8 +1,14 @@
 import { combineReducers } from 'redux';
-import views from './views';
-import card from './card';
+import apiData from './apiData';
+import filteredData from './filteredData';
+import sliderView from './sliderView';
+import listView from './listView';
+import searchParams from './searchParams';
 
 export default combineReducers({
-    views,
-    card
+    apiData,
+    filteredData,
+    sliderView,
+    listView,
+    searchParams
 });

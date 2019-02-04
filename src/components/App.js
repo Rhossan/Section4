@@ -15,6 +15,7 @@ class App extends Component {
 
     this.state = {
       data: null,
+      filteredData: null,
       sliderView: true,
       listView: false,
       searchParams: ''
@@ -60,12 +61,15 @@ class App extends Component {
         <div className='search'>
           <Search searchParams={searchParams} updateSearchParams={this.updateSearchParams}/>
         </div>
-        <h1 className='tk-benton-sans'>hi there</h1>
         <Provider store={store}>
-          <div>
-            <h3>Toggle Display</h3>
-            <button onClick={(e) => this.toggle('slider')}>Slider</button>
-            <button onClick={(e) => this.toggle('list')}>List</button>
+          <div className='toggles'>
+            <h3 className='tk-benton-sans'>Toggle Display</h3>
+            <button className={`tk-benton-sans-wide ${sliderView ? 'button-active' : 'button-disable'}`} 
+              onClick={(e) => this.toggle('slider')}>Slider
+            </button>
+            <button className={`tk-benton-sans-wide ${listView ? 'button-active' : 'button-disable'}`}
+              onClick={(e) => this.toggle('list')}>List
+            </button>
           </div>
           {/* <div> */}
             {/* <h1>Headline</h1> */}
