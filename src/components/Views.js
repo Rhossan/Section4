@@ -1,22 +1,11 @@
 import React, { Component } from 'react';
-// import { connect } from "react-redux";
-// import Carousal from './Carousal';
-import '../assets/section4fonts.css';
+import { connect } from "react-redux";
+import { filterData } from '../reducers/selectors';
 import Flickity from "react-flickity-component";
+import '../assets/section4fonts.css';
 import "../assets/flickity.css";
 
-// const flickityOptions = {
-//   pageDots: false,
-//   wrapAround: true,
-//   cellAlign: 'left',
-  
-// };
-export default class Views extends Component {
-        // img  
-        // show name 
-        // video name
-
-    
+class Views extends Component {
     render(){
         const { data } = this.props;
         const carousalMappings = data.map(d => {
@@ -30,27 +19,31 @@ export default class Views extends Component {
             </div>
             );
         });
+
         const flickityOptions = carousalMappings.length > 4 ? 
             {
                 pageDots: false,
                 wrapAround: true,
-                cellAlign: 'left'
-            } : 
+                cellAlign: 'left',
+            } 
+            : 
             {
                 pageDots: false,
                 wrapAround: false,
                 cellAlign: 'left',
-                prevNextButtons: false
+                prevNextButtons: false,
             };
+         
+        const nextButtonOptions = (carousalMappings.length < 5) ? 'next-button-options' : ''
         return(
             this.props.sliderView ? 
-            <div className='slider-view'>
+            <div className={`slider-view ${nextButtonOptions}`} >
                 <h1 className='tk-benton-sans-wide'>Headline</h1>
-                <Flickity  options={flickityOptions}>
+                <Flickity options={flickityOptions} reloadOnUpdate>
                     {carousalMappings}
                 </Flickity>
-            </div> :
-
+            </div> 
+            :
              <div className='list-view'>
                 <h1 className='tk-benton-sans-wide'>Headline</h1>
                 {carousalMappings}
@@ -58,9 +51,17 @@ export default class Views extends Component {
         );
     }
 }
-// const mapStateToProps = ( { data } ) => ({
-//     data
-// })
+const mapStateToProps = ( { apiData, sliderView, listView, searchParams } ) => {
+    const data = filterData(apiData.data, searchParams);
+    return(
+        {
+            data,
+            sliderView,
+            listView
+        }
+    );
+}
+    
 
 
-// export default connect(mapStateToProps)(Views);
+export default connect(mapStateToProps)(Views);

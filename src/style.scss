@@ -14,7 +14,7 @@ code {
     monospace;
 }
 
-//mobile view 
+///// header, search, toggle mobile view
   header{
   height: 50px;
   background-color: #170065;
@@ -24,7 +24,6 @@ code {
   & img{
     margin-top: 7.65px;
   }
-  // background-image: linear-gradient(#2F5D85, #2D436F);
 }
 .search{
   height: 125px;
@@ -49,35 +48,41 @@ code {
   }
 }
 
-
 .toggles{
   display: flex;
   justify-content: flex-end;
   margin-top: 50px;
-  margin-right: 88px;
+  margin-right: 5%;
   & h3 {
     color: #020064;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 11px;
   }
   & button{
-    width: 110px;
-    height: 44px;
+    width: 102px;
+    height: 36px;
     color: #020064;
     font-weight: 900;
-    font-size: 12px;
+    font-size: 10px;
     border-radius: 6px;
+    &:nth-child(2){
+      margin-left: 10px;
+    }
+    &:nth-child(3){
+      margin-left: 10px;
+    }
+    
+    &:hover{
+      cursor: pointer;
+    }
     &.button-active{
       background-color: #170065;
       color: white;
     }
-    &.button-disable{
-      // color: #565656;
-      // display: inline-block;
-      // border: none;
-    }
   }
 }
+
+///// header, search, toggle 1440px view
 
 
 @media screen and ( min-width: 376px ) {
@@ -90,7 +95,6 @@ code {
   & img{
     margin-top: 10px;
   }
-  // background-image: linear-gradient(#2F5D85, #2D436F);
 }
 .search{
   height: 176px;
@@ -113,20 +117,60 @@ code {
     }
   }
 }
+
+.toggles{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-right: 5%;
+  & h3 {
+    color: #020064;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  & button{
+    width: 110px;
+    height: 44px;
+    color: #020064;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 6px;
+    &:nth-child(2){
+      margin-left: 22px;
+    }
+    &:nth-child(3){
+      margin-left: 20px;
+    }
+    
+    &:hover{
+      cursor: pointer;
+    }
+    &.button-active{
+      background-color: #170065;
+      color: white;
+    }
+  }
+}
 }
 
 
-// for mobile view
+///// slider mobile view
+
 .slider-view{
   .flickity-slider {
     left: 52px !important; 
   }
+  &.next-button-options{
+      .flickity-prev-next-button.next {
+          display: block;
+      }
+    }
   & > h1{
     margin-left: 52px;
     margin-bottom: 30px;
     color: #020064;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 18px;
   }
   .card{
     margin-right: 20px;
@@ -155,11 +199,16 @@ code {
 }
 
 
-
+///// slider 1440px view
 @media screen and ( min-width: 376px ) {
   .slider-view{
     .flickity-slider {
       left: 86px !important; 
+    }
+    &.next-button-options{
+      .flickity-prev-next-button.next {
+          display: none;
+      }
     }
     & > h1{
       margin-left: 86px;
@@ -194,7 +243,7 @@ code {
   
 }
 
-  //mobile view
+///// list mobile view
   .list-view{
     display: flex;
     flex-direction: column;
@@ -205,7 +254,7 @@ code {
       margin-bottom: 30px;
       color: #020064;
       font-weight: 900;
-      font-size: 24px;
+      font-size: 18px;
     }
     & .card {
       width: 328px;
@@ -236,6 +285,8 @@ code {
       }
     }
   }
+
+///// list 1440px view
   @media screen and ( min-width: 376px ) {
     .list-view{
     display: flex;
@@ -279,10 +330,3 @@ code {
   }
   }
   
-    
-
-
-// .flickity-prev-next-button.next {
-//     right: 5%;
-//     top: 45%;
-// }

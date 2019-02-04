@@ -1,3 +1,3 @@
-export default function changeApiData(apiData){
+export default function getApiData(apiData){
     return {type: 'FETCH_DATA', payload: apiData};
 }

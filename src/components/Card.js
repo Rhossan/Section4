@@ -1,2 +1,0 @@
-//make into functional component 
-

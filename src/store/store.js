@@ -1,11 +1,11 @@
 import {createStore, compose, applyMiddleware} from 'redux';
 import  thunk  from 'redux-thunk';
 import reducer from '../reducers';
+import data from '../data.json';
 
 const store = createStore(
   reducer, {
-      apiData: null,
-      filteredData: null,
+      apiData: data,
       sliderView: true,
       listView: false,
       searchParams: ''

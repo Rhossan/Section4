@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+import changeSearchParams from '../actionCreators/changeSearchParams';
 
-export default class Search extends Component {
+class Search extends Component {
 
     render(){
         const {searchParams} = this.props;
@@ -8,7 +10,7 @@ export default class Search extends Component {
         <div className='search-field'>
             <input
                 className='tk-benton-sans-wide'
-                onChange={this.props.updateSearchParams}
+                onChange={this.props.update}
                 value={searchParams}
                 placeholder='Search "Walmart"'
             ></input>
@@ -16,3 +18,16 @@ export default class Search extends Component {
         );
     }
 }
+
+const mapStateToProps = ( { searchParams } ) => ({
+    searchParams
+})
+
+const mapDispatchToProps = dispatch => ({
+  update(event){
+    dispatch(changeSearchParams(event.target.value));
+  }
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
