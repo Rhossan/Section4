@@ -20,23 +20,28 @@ class Views extends Component {
             );
         });
 
+        // const flickityOptions = {
+        //         pageDots: false,
+        //         wrapAround: false,
+        //         cellAlign: 'left',
+        //         prevNextButtons: false
+        //     };
         const flickityOptions = carousalMappings.length < 5 ? 
             {
                 pageDots: false,
                 wrapAround: false,
                 cellAlign: 'left',
-                prevNextButtons: false,
+                prevNextButtons: false
             }
             :
             {
                 pageDots: false,
                 wrapAround: true,
-                cellAlign: 'left',
+                cellAlign: 'left'
             };
             
          
         const nextButtonOptions = (carousalMappings.length < 5) ? 'next-button-options' : ''
-        console.log(carousalMappings)
         return(
             this.props.sliderView ? 
             <div className={`slider-view ${nextButtonOptions}`} >
