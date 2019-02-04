@@ -41,7 +41,8 @@ class Views extends Component {
             };
             
          
-        const nextButtonOptions = (carousalMappings.length < 5) ? 'next-button-options' : ''
+        let nextButtonOptions = (carousalMappings.length < 5) ? 'next-button-options' : ''
+        if (carousalMappings.length === 1) nextButtonOptions = 'single-card'; 
         return(
             this.props.sliderView ? 
             <div className={`slider-view ${nextButtonOptions}`} >

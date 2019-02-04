@@ -170,6 +170,11 @@ code {
   &.next-button-options{
       .flickity-prev-next-button.next {
           display: block;
+        }
+    }
+  &.single-card{
+      .card.is-selected{
+        left: 0 !important;
       }
     }
   & > h1{
