@@ -1,5 +1,4 @@
 export default function sliderViewReducer(state = {}, action) {
-    // return Object.assign({}, state, {location: action.payload});
     if (action.type === 'TOGGLE_VIEW') {
         switch (action.payload) {
             case 'slider':
@@ -9,7 +8,6 @@ export default function sliderViewReducer(state = {}, action) {
             default:
                 return state;
         }
-        // return action.payload;
     } else {
         return state;
     }

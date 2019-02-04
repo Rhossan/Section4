@@ -14,6 +14,13 @@ code {
     monospace;
 }
 
+
+
+// .card.is-selected{
+//   position: absolute;
+//   left: 0 !important;
+// }
+
 ///// header, search, toggle mobile view
   header{
   height: 50px;
@@ -305,7 +312,7 @@ code {
       display: flex;
       margin-bottom: 20px;
       & > img {
-        width: 222px;
+        width: 221.53px;
         height: 125px;
         border-radius: 8px;
       }
